@@ -12,8 +12,8 @@ const PetDetail = ({pet, error, loading}) => {
                         src={pet?.image}
                         sx={{
                             width: "100%",
-                            height: {xs: 300, lg: 300},
-                            objectFit: "contain",
+                            height: {xs: 300, lg: 400},
+                            objectFit: "cover",
                             borderRadius: 1
                         }}
                     />

@@ -4,12 +4,12 @@ import {Link} from "react-router-dom";
 const Pet = ({pet}) => {
     return (
         <Link to={`/adoptions/${pet._id}/adopt`} style={{textDecoration: "none"}}>
-            <Card elevation={0} sx={{backgroundColor: "background.paper"}}>
+            <Card elevation={0} sx={{backgroundColor: "background.paper", height: "100%"}}>
                 <CardContent>
                     <CardMedia
                         src={pet.image}
                         component="img"
-                        sx={{borderRadius: 0.5, mb: 2, height: 250, objectFit: "contain"}}
+                        sx={{borderRadius: 0.5, mb: 2, height: 250, objectFit: "cover"}}
                     />
                     <Stack spacing={2}>
                         <Typography
