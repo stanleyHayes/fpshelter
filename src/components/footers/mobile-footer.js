@@ -46,7 +46,7 @@ const MobileFooter = () => {
                             variant="h4"
                             sx={{
                                 textTransform: "uppercase",
-                                color: "white",
+                                color: "text.primary",
                                 fontWeight: 700,
                                 fontFamily: "SatrevaNova",
                                 letterSpacing: 1.4
@@ -98,29 +98,29 @@ const MobileFooter = () => {
                             borderRadius: "100%",
                         }}
                     />}>
-                        <Typography variant="body1" sx={{color: "white", fontWeight: 700}}>
+                        <Typography variant="body1" sx={{color: "text.primary", fontWeight: 700}}>
                             Main
                         </Typography>
                     </AccordionSummary>
                     <AccordionDetails sx={{backgroundColor: "background.paper"}}>
                         <Stack spacing={2}>
                             <Link to="#" style={{textDecoration: "none"}}>
-                                <Typography variant="body2" sx={{color: "white"}}>
+                                <Typography variant="body2" sx={{color: "text.secondary"}}>
                                     Home
                                 </Typography>
                             </Link>
                             <Link to="#" style={{textDecoration: "none"}}>
-                                <Typography variant="body2" sx={{color: "white"}}>
+                                <Typography variant="body2" sx={{color: "text.secondary"}}>
                                     Adoption
                                 </Typography>
                             </Link>
                             <Link to="#" style={{textDecoration: "none"}}>
-                                <Typography variant="body2" sx={{color: "white"}}>
+                                <Typography variant="body2" sx={{color: "text.secondary"}}>
                                     Shelter Support
                                 </Typography>
                             </Link>
                             <Link to="#" style={{textDecoration: "none"}}>
-                                <Typography variant="body2" sx={{color: "white"}}>
+                                <Typography variant="body2" sx={{color: "text.secondary"}}>
                                     Contacts
                                 </Typography>
                             </Link>
@@ -141,7 +141,7 @@ const MobileFooter = () => {
                                     borderRadius: "100%",
                                 }}
                             />}>
-                        <Typography variant="body1" sx={{color: "white", fontWeight: 700}}>
+                        <Typography variant="body1" sx={{color: "text.primary", fontWeight: 700}}>
                             Contacts
                         </Typography>
                     </AccordionSummary>
@@ -158,7 +158,7 @@ const MobileFooter = () => {
                                         }}
                                     />
                                     <MUILink href="tel://+46123456789" style={{textDecoration: "none"}}>
-                                        <Typography variant="body2" sx={{color: "white"}}>
+                                        <Typography variant="body2" sx={{color: "text.secondary"}}>
                                             +46 123 456 789
                                         </Typography>
                                     </MUILink>
@@ -177,7 +177,7 @@ const MobileFooter = () => {
                                     <MUILink href="#" style={{textDecoration: "none"}}>
                                         <Typography
                                             variant="body2"
-                                            sx={{color: "white"}}>
+                                            sx={{color: "text.secondary"}}>
                                             Sheilas Gata 58, Uppsala, Sweden
                                         </Typography>
                                     </MUILink>
@@ -196,7 +196,7 @@ const MobileFooter = () => {
                                     <MUILink href="mailto://info@pfshelter.org" underline="none">
                                         <Typography
                                             variant="body2"
-                                            sx={{color: "white"}}>
+                                            sx={{color: "text.secondary"}}>
                                             info@pfshelter.org
                                         </Typography>
                                     </MUILink>
