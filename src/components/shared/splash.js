@@ -42,7 +42,7 @@ const Splash = () => {
                                 variant="h6"
                                 sx={{
                                     textTransform: "uppercase",
-                                    color: "colors.accent",
+                                    color: "secondary.main",
                                     fontWeight: 700,
                                     fontFamily: "SatrevaNova",
                                     letterSpacing: 1.4
@@ -88,7 +88,7 @@ const Splash = () => {
                             align="center"
                             sx={{
                                 textTransform: "none",
-                                color: "colors.accent",
+                                color: "secondary.main",
                                 fontFamily: "SatrevaNova",
                                 letterSpacing: 1.4,
                                 fontWeight: 700

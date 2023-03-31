@@ -24,7 +24,7 @@ function App() {
           <AnimatePresence presenceAffectsLayout={true} mode="wait" initial={true}>
             <Routes location={location}>
               <Route path="/" element={<Suspense fallback={<Splash/>}><HomePage/></Suspense>}/>
-              <Route path="/adoptions/:c" element={<Suspense fallback={<Splash/>}><AdoptionsPage/></Suspense>}/>
+              <Route path="/adoptions" element={<Suspense fallback={<Splash/>}><AdoptionsPage/></Suspense>}/>
               <Route path="/adoptions/:petID/adopt" element={<Suspense fallback={<Splash/>}><AdoptionDetailPage/></Suspense>}/>
               <Route path="*" element={<Suspense fallback={<Splash/>}><NotFoundPage/></Suspense>}/>
             </Routes>

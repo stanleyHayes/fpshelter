@@ -5,7 +5,7 @@ import Copyright from "../shared/copyright";
 
 const Footer = () => {
     return (
-        <Box sx={{backgroundColor: "colors.footer", pt: 4}}>
+        <Box sx={{backgroundColor: "background.paper", pt: 4}}>
             <Box sx={{mb: 3}}>
                 <Container maxWidth="lg" sx={{display: {xs: "none", lg: "block"}}}>
                     <DesktopFooter/>

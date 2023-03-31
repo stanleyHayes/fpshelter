@@ -11,7 +11,7 @@ const NavigationLink = ({path, label}) => {
 
     return (
         <Box onClick={() => dispatch(UI_ACTION_CREATORS.toggleDrawer(false))}>
-            <Link to={path} smooth={true} spy={true} offset={50} duration={500} delay={100}>
+            <Link style={{cursor: "pointer"}} to={path} smooth={true} spy={true} offset={50} duration={500} delay={100}>
                 <Typography
                     variant="body1"
                     sx={{

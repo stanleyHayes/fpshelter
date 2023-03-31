@@ -1,44 +1,37 @@
 import {Box, CardMedia, Grid, Link as MUILink, Stack, Typography} from "@mui/material";
 import {Link} from "react-router-dom";
-import {CallOutlined, LocationOnOutlined, MailOutline, ScheduleOutlined} from "@mui/icons-material";
+import {
+    CallOutlined,
+    Facebook,
+    Instagram,
+    LocationOnOutlined,
+    MailOutline,
+    Twitter,
+    YouTube
+} from "@mui/icons-material";
 import {AnimatePresence, motion} from "framer-motion";
 import redLogo from "../../assets/images/logo/redLogo.png";
 import blueLogo from "../../assets/images/logo/blueLogo.png";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import {selectUI} from "../../redux/features/ui/ui-slice";
 
 const DesktopFooter = () => {
 
     const {theme} = useSelector(selectUI);
-    const dispatch = useDispatch();
 
     return (
         <Box>
             <Grid container={true} spacing={4}>
-                <Grid item={true} lg={3}>
+                <Grid item={true} lg={4}>
                     <Stack spacing={3}>
-                        <Link to="/" style={{textDecoration: "none"}}>
-                            <Typography
-                                variant="h4"
-                                align="center"
-                                sx={{
-                                    textTransform: "uppercase",
-                                    color: "white",
-                                    fontWeight: 700,
-                                    fontFamily: "SatrevaNova",
-                                    letterSpacing: 1.4,
-                                }}>
-                                PF Shelter
-                            </Typography>
-                        </Link>
                         <Box>
-                            <Stack direction="row" spacing={3} alignItems="center">
+                            <Stack direction="column" spacing={3} alignItems="center">
                                 <Link to="/" style={{textDecoration: "none"}}>
                                     <Typography
-                                        variant="h6"
+                                        variant="h4"
                                         sx={{
                                             textTransform: "uppercase",
-                                            color: "colors.accent",
+                                            color: "secondary.main",
                                             fontWeight: 700,
                                             fontFamily: "SatrevaNova",
                                             letterSpacing: 1.4
@@ -53,7 +46,7 @@ const DesktopFooter = () => {
                                             <Link to="/" style={{textDecoration: "none"}}>
                                                 <CardMedia
                                                     component="img"
-                                                    sx={{width: 70, height: 70, objectFit: "cover"}}
+                                                    sx={{width: 50, height: 50, objectFit: "cover"}}
                                                     src={redLogo}
                                                 />
                                             </Link>
@@ -66,7 +59,7 @@ const DesktopFooter = () => {
                                             <Link to="/" style={{textDecoration: "none"}}>
                                                 <CardMedia
                                                     component="img"
-                                                    sx={{width: 70, height: 70, objectFit: "cover"}}
+                                                    sx={{width: 50, height: 50, objectFit: "cover"}}
                                                     src={blueLogo}
                                                 />
                                             </Link>
@@ -77,88 +70,52 @@ const DesktopFooter = () => {
                         </Box>
                     </Stack>
                 </Grid>
-                <Grid item={true} lg={3}>
+                <Grid item={true} lg={4}>
                     <Stack spacing={2}>
                         <Typography variant="body1" sx={{color: "white", fontWeight: 700}}>
                             Main
                         </Typography>
                         <Link to="#" style={{textDecoration: "none"}}>
                             <Typography variant="body2" sx={{color: "white"}}>
-                                About company
+                                Home
                             </Typography>
                         </Link>
                         <Link to="#" style={{textDecoration: "none"}}>
                             <Typography variant="body2" sx={{color: "white"}}>
-                                Our chemicals
+                                About Us
                             </Typography>
                         </Link>
                         <Link to="#" style={{textDecoration: "none"}}>
                             <Typography variant="body2" sx={{color: "white"}}>
-                                Our equipment
+                                Adoption
                             </Typography>
                         </Link>
                         <Link to="#" style={{textDecoration: "none"}}>
                             <Typography variant="body2" sx={{color: "white"}}>
-                                Work
-                            </Typography>
-                        </Link>
-                        <Link to="#" style={{textDecoration: "none"}}>
-                            <Typography variant="body2" sx={{color: "white"}}>
-                                Contacts
+                                Shelter Support
                             </Typography>
                         </Link>
                     </Stack>
 
                 </Grid>
-                <Grid item={true} lg={3}>
+                <Grid item={true} lg={4}>
                     <Stack spacing={2}>
                         <Typography variant="body1" sx={{color: "white", fontWeight: 700}}>
-                            Cleaning
-                        </Typography>
-                        <Link to="#" style={{textDecoration: "none"}}>
-                            <Typography variant="body2" sx={{color: "white"}}>
-                                After pest control
-                            </Typography>
-                        </Link>
-                        <Link to="#" style={{textDecoration: "none"}}>
-                            <Typography variant="body2" sx={{color: "white"}}>
-                                Post-construction
-                            </Typography>
-                        </Link>
-                        <Link to="#" style={{textDecoration: "none"}}>
-                            <Typography variant="body2" sx={{color: "white"}}>
-                                After tenants
-                            </Typography>
-                        </Link>
-                        <Link to="#" style={{textDecoration: "none"}}>
-                            <Typography variant="body2" sx={{color: "white"}}>
-                                Premises
-                            </Typography>
-                        </Link>
-                        <Link to="#" style={{textDecoration: "none"}}>
-                            <Typography variant="body2" sx={{color: "white"}}>
-                                Dry cleaning of furniture
-                            </Typography>
-                        </Link>
-                    </Stack>
-                </Grid>
-                <Grid item={true} lg={3}>
-                    <Stack spacing={2}>
-                        <Typography variant="body1" sx={{color: "white", fontWeight: 700}}>
-                            Contact Info
+                            Contact
                         </Typography>
                         <Box>
                             <Stack direction="row" spacing={4} alignItems="center">
                                 <CallOutlined
                                     sx={{
-                                        color: "colors.accent",
+                                        color: "icon.secondary",
                                         fontSize: 24,
-                                        cursor: "pointer"
+                                        cursor: "pointer",
+                                        padding: 0.4
                                     }}
                                 />
-                                <MUILink href="tel://+380334268644" style={{textDecoration: "none"}}>
-                                    <Typography variant="body2" sx={{color: "white", fontFamily: "Urbanist"}}>
-                                        +38 033-426 86 44
+                                <MUILink href="tel://+46123456789" style={{textDecoration: "none"}}>
+                                    <Typography variant="body2" sx={{color: "white"}}>
+                                        +46 123 456 789
                                     </Typography>
                                 </MUILink>
                             </Stack>
@@ -167,16 +124,17 @@ const DesktopFooter = () => {
                             <Stack direction="row" spacing={4} alignItems="center">
                                 <LocationOnOutlined
                                     sx={{
-                                        color: "colors.accent",
+                                        color: "icon.secondary",
                                         fontSize: 24,
-                                        cursor: "pointer"
+                                        cursor: "pointer",
+                                        padding: 0.4
                                     }}
                                 />
                                 <MUILink href="#" style={{textDecoration: "none"}}>
                                     <Typography
                                         variant="body2"
-                                        sx={{color: "white", fontFamily: "Urbanist"}}>
-                                        Kyiv,Vidradnyi avenue 55
+                                        sx={{color: "white"}}>
+                                        Sheilas Gata 58, Uppsala, Sweden
                                     </Typography>
                                 </MUILink>
                             </Stack>
@@ -185,56 +143,65 @@ const DesktopFooter = () => {
                             <Stack direction="row" spacing={4} alignItems="center">
                                 <MailOutline
                                     sx={{
-                                        color: "colors.accent",
+                                        color: "icon.secondary",
                                         fontSize: 24,
-                                        cursor: "pointer"
+                                        cursor: "pointer",
+                                        padding: 0.4
                                     }}
                                 />
-                                <MUILink href="mailto://info@unonacleaning.com" style={{textDecoration: "none"}}>
+                                <MUILink href="mailto://info@pfshelter.org" style={{textDecoration: "none"}}>
                                     <Typography
                                         variant="body2"
-                                        sx={{color: "white", fontFamily: "Urbanist"}}>
-                                        info@unonacleaning.com
+                                        sx={{color: "white"}}>
+                                        info@pfshelter.org
                                     </Typography>
                                 </MUILink>
                             </Stack>
                         </Box>
-
                         <Box>
                             <Stack direction="row" spacing={4} alignItems="center">
-                                <ScheduleOutlined
-                                    sx={{
-                                        color: "colors.accent",
-                                        fontSize: 24,
-                                        cursor: "pointer"
-                                    }}
-                                />
                                 <MUILink href="#" style={{textDecoration: "none"}}>
-                                    <Typography
-                                        variant="body2"
-                                        sx={{color: "white", fontFamily: "Urbanist"}}>
-                                        Mon-Fri: 09:.00 am - 05:00 pm
-                                    </Typography>
+                                    <Instagram
+                                        sx={{
+                                            color: "icon.secondary",
+                                            fontSize: 24,
+                                            cursor: "pointer",
+                                            padding: 0.4
+                                        }}
+                                    />
+                                </MUILink>
+                                <MUILink href="#" style={{textDecoration: "none"}}>
+                                    <Facebook
+                                        sx={{
+                                            color: "icon.secondary",
+                                            fontSize: 24,
+                                            cursor: "pointer",
+                                            padding: 0.4
+                                        }}
+                                    />
+                                </MUILink>
+                                <MUILink href="#" style={{textDecoration: "none"}}>
+                                    <YouTube
+                                        sx={{
+                                            color: "icon.secondary",
+                                            fontSize: 24,
+                                            cursor: "pointer",
+                                            padding: 0.4
+                                        }}
+                                    />
+                                </MUILink>
+                                <MUILink href="#" style={{textDecoration: "none"}}>
+                                    <Twitter
+                                        sx={{
+                                            color: "icon.secondary",
+                                            fontSize: 24,
+                                            cursor: "pointer",
+                                            padding: 0.4
+                                        }}
+                                    />
                                 </MUILink>
                             </Stack>
                         </Box>
-                        <Box>
-                            <Stack direction="row" spacing={4} alignItems="center">
-                                <ScheduleOutlined
-                                    sx={{
-                                        color: "colors.accent",
-                                        fontSize: 24,
-                                        cursor: "pointer"
-                                    }}
-                                />
-                                <Typography
-                                    variant="body2"
-                                    sx={{color: "white", fontFamily: "Urbanist"}}>
-                                    Saturday, Sunday: closed
-                                </Typography>
-                            </Stack>
-                        </Box>
-
                     </Stack>
                 </Grid>
             </Grid>

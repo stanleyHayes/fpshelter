@@ -1,11 +1,12 @@
-import {Box, Button, Divider, Link as MUILink, Stack, Typography} from "@mui/material";
+import {Box, Button, CardMedia, Divider, Stack, Typography} from "@mui/material";
 import {Link} from "react-router-dom";
 import NavigationLink from "./navigation-link";
 import {AnimatePresence, motion} from "framer-motion";
-import {CloseOutlined, DarkModeOutlined, LightModeOutlined, WifiCalling3Outlined} from "@mui/icons-material";
+import {CloseOutlined, DarkModeOutlined, LightModeOutlined} from "@mui/icons-material";
 import {selectUI, UI_ACTION_CREATORS} from "../../redux/features/ui/ui-slice";
 import {useDispatch, useSelector} from "react-redux";
-import {Link as ScrollLink} from "react-scroll";
+import redLogo from "../../assets/images/logo/redLogo.png";
+import blueLogo from "../../assets/images/logo/blueLogo.png";
 
 const DrawerContent = () => {
 
@@ -24,34 +25,34 @@ const DrawerContent = () => {
                     alignItems="center"
                     justifyContent="space-between">
 
-                    <AnimatePresence initial={true} mode="sync">
+                    <AnimatePresence initial={true} mode="wait">
                         {theme === "dark" && (
                             <Box component={motion.div} exit={{opacity: 0, transition: {duration: 0.5}}}>
                                 <LightModeOutlined
                                     onClick={() => dispatch(UI_ACTION_CREATORS.toggleTheme())}
                                     sx={{
-                                        color: "colors.accent",
+                                        color: "icon.secondary",
                                         padding: 1,
                                         fontSize: 32,
-                                        borderRadius: "25%",
+                                        borderRadius: "100%",
                                         cursor: "pointer",
-                                        backgroundColor: "icon.accentBackground"
+                                        backgroundColor: "icon.secondaryBackground"
                                     }}/>
                             </Box>
                         )}
                     </AnimatePresence>
-                    <AnimatePresence initial={true} mode="sync">
+                    <AnimatePresence initial={true} mode="wait">
                         {theme === "light" && (
                             <Box component={motion.div} exit={{opacity: 0, transition: {duration: 0.5}}}>
                                 <DarkModeOutlined
                                     onClick={() => dispatch(UI_ACTION_CREATORS.toggleTheme())}
                                     sx={{
-                                        color: "colors.accent",
+                                        color: "icon.secondary",
                                         padding: 1,
                                         fontSize: 32,
-                                        borderRadius: "25%",
+                                        borderRadius: "100%",
                                         cursor: "pointer",
-                                        backgroundColor: "icon.accentBackground"
+                                        backgroundColor: "icon.secondaryBackground"
                                     }}/>
                             </Box>
                         )}
@@ -59,12 +60,12 @@ const DrawerContent = () => {
                     <CloseOutlined
                         onClick={() => dispatch(UI_ACTION_CREATORS.toggleDrawer(false))}
                         sx={{
-                            color: "colors.accent",
+                            color: "icon.secondary",
                             padding: 1,
                             fontSize: 32,
-                            borderRadius: "25%",
+                            borderRadius: "100%",
                             cursor: "pointer",
-                            backgroundColor: "icon.accentBackground"
+                            backgroundColor: "icon.secondaryBackground"
                         }}/>
                 </Stack>
 
@@ -74,56 +75,58 @@ const DrawerContent = () => {
                             variant="h4"
                             sx={{
                                 textTransform: "uppercase",
-                                color: "colors.accent",
+                                color: "icon.secondary",
                                 fontWeight: 700,
-                                fontFamily: "RayleighGlamour",
+                                fontFamily: "SatrevaNova",
                                 letterSpacing: 1.4
                             }}>
-                            Unona
+                            PF Shelter
                         </Typography>
                     </Link>
+                    <Stack direction="row" spacing={3} alignItems="center" justifyContent="center">
+                        <AnimatePresence initial={true} mode="sync">
+                            {theme === "dark" && (
+                                <Box component={motion.div} exit={{opacity: 0, transition: {duration: 0.5}}}>
+                                    <Link to="/" style={{textDecoration: "none"}}>
+                                        <CardMedia
+                                            component="img"
+                                            sx={{width: 70, height: 70, objectFit: "cover"}}
+                                            src={redLogo}
+                                        />
+                                    </Link>
+                                </Box>
+                            )}
+                        </AnimatePresence>
+                        <AnimatePresence initial={true} mode="sync">
+                            {theme === "light" && (
+                                <Box component={motion.div} exit={{opacity: 0, transition: {duration: 0.5}}}>
+                                    <Link to="/" style={{textDecoration: "none"}}>
+                                        <CardMedia
+                                            component="img"
+                                            sx={{width: 70, height: 70, objectFit: "cover"}}
+                                            src={blueLogo}
+                                        />
+                                    </Link>
+                                </Box>
+                            )}
+                        </AnimatePresence>
+                    </Stack>
                 </Box>
 
                 <Box sx={{px: 4}}>
                     <Stack direction="column" spacing={3}>
                         <NavigationLink path="home" label="Home"/>
-                        <NavigationLink path="services" label="Our Services"/>
-                        <NavigationLink path="calculator" label="Calculator"/>
-                        <NavigationLink path="openings" label="Careers"/>
-                        <NavigationLink path="reviews" label="Reviews"/>
-                        <NavigationLink path="articles" label="Our Blog"/>
-                        <NavigationLink path="faqs" label="FAQ's"/>
+                        <NavigationLink path="about" label="About Us"/>
+                        <NavigationLink path="adoption" label="Adoption"/>
+                        <NavigationLink path="support" label="Shelter Support"/>
                     </Stack>
                 </Box>
 
                 <Box sx={{px: 4}}>
                     <Stack direction="column" spacing={2} alignItems="center">
-                        <Stack direction="row" justifyContent="space-between" alignItems="center">
-                            <MUILink href="tel://+380334268644" underline="none">
-                                <WifiCalling3Outlined
-                                    sx={{
-                                        color: "colors.accent",
-                                        padding: 1,
-                                        fontSize: 32,
-                                        borderRadius: "25%",
-                                        backgroundColor: "icon.accentBackground"
-                                    }}/>
-                            </MUILink>
-                            <MUILink href="tel://+380334268644" underline="none">
-                                <Button
-                                    variant="text"
-                                    size="large"
-                                    sx={{
-                                        textTransform: "capitalize",
-                                        color: "colors.accent",
-                                        cursor: "pointer",
-                                    }}>
-                                    +38 033-426 86 44
-                                </Button>
-                            </MUILink>
-                        </Stack>
-                        <ScrollLink to="contact" smooth={true} spy={true} offset={50} duration={500} delay={100}>
+                        <Link to="/adoptions" style={{textDecoration: "none"}}>
                             <Button
+                                fullWidth={true}
                                 variant="contained"
                                 disableElevation={true}
                                 size="large"
@@ -131,15 +134,14 @@ const DrawerContent = () => {
                                 sx={{
                                     textTransform: "capitalize",
                                     color: "white",
-                                    borderRadius: 2,
                                     borderWidth: 2,
                                     backgroundColor: "secondary.main",
                                     fontWeight: 700,
                                     fontFamily: "SatrevaNova"
                                 }}>
-                                Contact Us
+                                Adopt a Friend
                             </Button>
-                        </ScrollLink>
+                        </Link>
                     </Stack>
                 </Box>
             </Stack>

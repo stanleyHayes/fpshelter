@@ -4,7 +4,10 @@ const Copyright = () => {
     return (
         <Stack sx={{py: 3}}>
             <Typography variant="body2" sx={{color: "white", fontFamily: "SatrevaNova", fontWeight: "bold"}} align="center">
-                2023 &copy; PF Shelter
+                <Typography component="span" variant="body2" sx={{color: "white", fontWeight: "bold"}} align="center">
+                    2023{" "}
+                </Typography>
+                &copy; PF Shelter
             </Typography>
         </Stack>
     )

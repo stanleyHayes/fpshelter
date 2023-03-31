@@ -5,20 +5,13 @@ import {
     CardContent,
     FormControl,
     FormHelperText,
-    Grid,
     OutlinedInput,
     Stack,
     Typography
 } from "@mui/material";
 import {useFormik} from "formik";
 import * as yup from "yup";
-import {
-    CallOutlined,
-    CloseOutlined,
-    MailOutlined,
-    Person2Outlined,
-    VolunteerActivismOutlined
-} from "@mui/icons-material";
+import {CallOutlined, CloseOutlined, MailOutlined, Person2Outlined} from "@mui/icons-material";
 
 const AdoptionForm = () => {
 
@@ -40,38 +33,6 @@ const AdoptionForm = () => {
             sx={{backgroundColor: "background.default"}}
             elevation={0}>
             <CardContent>
-                <Box sx={{mb: 2}}>
-                    <VolunteerActivismOutlined
-                        sx={{
-                            color: "icon.secondary",
-                            padding: 1,
-                            fontSize: 40,
-                            borderRadius: "100%",
-                            backgroundColor: "icon.secondaryBackground",
-                            mb: 4
-                        }}
-                    />
-                    <Typography
-                        variant="body1"
-                        sx={{color: "text.secondary", fontWeight: 600, mb: 1}}>
-                        Volunteering
-                    </Typography>
-                    <Typography variant="body2" sx={{color: "text.secondary", mb: 3}}>
-                        You can join our team and help with animal care, cleaning and other tasks
-                    </Typography>
-
-                    <Typography
-                        variant="body1"
-                        sx={{color: "text.secondary", mb: 1}}>
-                        I want to become a volunteer
-                    </Typography>
-
-                    <Typography
-                        variant="body2"
-                        sx={{color: "text.secondary", mb: 1}}>
-                        Please fill out the form, and we will contact you
-                    </Typography>
-                </Box>
                 <form onSubmit={formik.handleSubmit}>
                     <Stack spacing={2} sx={{mb: 4}}>
                         <Box>

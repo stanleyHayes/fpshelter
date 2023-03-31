@@ -12,7 +12,7 @@ const PetDetail = ({pet, error, loading}) => {
                         src={pet?.image}
                         sx={{
                             width: "100%",
-                            height: {xs: 300, lg: 500},
+                            height: {xs: 300, lg: 300},
                             objectFit: "contain",
                             borderRadius: 1
                         }}
@@ -20,7 +20,7 @@ const PetDetail = ({pet, error, loading}) => {
                 )}
             </Box>
             <Box>
-                <Card>
+                <Card elevation={0} variant="elevation" sx={{}}>
                     <CardContent>
                         <Stack direction="column" spacing={2}>
                             {loading ? (
@@ -29,7 +29,6 @@ const PetDetail = ({pet, error, loading}) => {
                                 <Typography
                                     sx={{
                                         fontFamily: "SatrevaNova",
-                                        mb: 1,
                                         fontWeight: 700,
                                         color: "secondary.main"
                                     }}
@@ -76,10 +75,10 @@ const PetDetail = ({pet, error, loading}) => {
                                 </Stack>
                             )}
 
+                            <Typography sx={{color: "text.secondary"}} variant="body2">{pet?.description}</Typography>
 
-                            <Typography sx={{color: "text.secondary"}} variant="body1">{pet?.description}</Typography>
                             <Box>
-                                <Typography sx={{color: "text.primary", mb: 1}} variant="body1">Skills</Typography>
+                                <Typography sx={{color: "text.primary", mb: 1}} variant="body2">Skills</Typography>
                                 {pet?.skills.length === 0 ? (
                                     <Typography sx={{color: "text.secondary"}} variant="body1">
                                         {`${pet?.name} has no known skills`}
@@ -89,7 +88,7 @@ const PetDetail = ({pet, error, loading}) => {
                                         {pet?.skills.map((skill, index) => {
                                             return (
                                                 <Grid item={true} xs="auto" key={index}>
-                                                    <Chip variant="outlined" label={skill} color="secondary"/>
+                                                    <Chip variant="filled" label={skill} color="secondary"/>
                                                 </Grid>
                                             )
                                         })}
@@ -97,7 +96,7 @@ const PetDetail = ({pet, error, loading}) => {
                                 )}
                             </Box>
                             <Box>
-                                <Typography sx={{color: "text.primary", mb: 1}} variant="body1">
+                                <Typography sx={{color: "text.primary", mb: 1}} variant="body2">
                                     Allergies / Conditions
                                 </Typography>
                                 {pet?.allergies.length === 0 ? (
@@ -109,7 +108,7 @@ const PetDetail = ({pet, error, loading}) => {
                                         {pet?.allergies.map((allergy, index) => {
                                             return (
                                                 <Grid item={true} xs="auto" key={index}>
-                                                    <Chip variant="outlined" label={allergy} color="secondary"/>
+                                                    <Chip variant="filled" label={allergy} color="secondary"/>
                                                 </Grid>
                                             )
                                         })}

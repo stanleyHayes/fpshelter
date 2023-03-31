@@ -9,7 +9,16 @@ import {
     Typography
 } from "@mui/material";
 import {Link} from "react-router-dom";
-import {CallOutlined, LocationOnOutlined, MailOutline, ScheduleOutlined, South} from "@mui/icons-material";
+import {
+    CallOutlined,
+    Facebook,
+    Instagram,
+    LocationOnOutlined,
+    MailOutline,
+    South,
+    Twitter,
+    YouTube
+} from "@mui/icons-material";
 import {AnimatePresence, motion} from "framer-motion";
 import redLogo from "../../assets/images/logo/redLogo.png";
 import blueLogo from "../../assets/images/logo/blueLogo.png";
@@ -21,11 +30,15 @@ const MobileFooter = () => {
     return (
         <Box>
             <Stack spacing={1}>
-                <Accordion square={true} sx={{backgroundColor: "colors.footer"}}>
-                    <AccordionSummary sx={{backgroundColor: "colors.footer"}} expandIcon={<South
+                <Accordion
+                    elevation={0}
+                    square={true}
+                    sx={{backgroundColor: "background.paper"}}>
+                    <AccordionSummary sx={{backgroundColor: "background.paper"}} expandIcon={<South
                         sx={{
                             color: "icon.secondary",
                             fontSize: 24,
+                            padding: 0.4,
                             borderRadius: "100%",
                         }}
                     />}>
@@ -38,25 +51,11 @@ const MobileFooter = () => {
                                 fontFamily: "SatrevaNova",
                                 letterSpacing: 1.4
                             }}>
-                            Unona
+                            PF Shelter
                         </Typography>
                     </AccordionSummary>
-                    <AccordionDetails sx={{backgroundColor: "colors.footer"}}>
+                    <AccordionDetails sx={{backgroundColor: "background.paper"}}>
                         <Stack direction="row" spacing={3} alignItems="center">
-                            <Link to="/" style={{textDecoration: "none"}}>
-                                <Typography
-                                    variant="h6"
-                                    sx={{
-                                        textTransform: "uppercase",
-                                        color: "colors.accent",
-                                        fontWeight: 700,
-                                        fontFamily: "SatrevaNova",
-                                        letterSpacing: 1.4
-                                    }}>
-                                    PF Shelter
-                                </Typography>
-                            </Link>
-
                             <AnimatePresence initial={true} mode="sync">
                                 {theme === "dark" && (
                                     <Box component={motion.div} exit={{opacity: 0, transition: {duration: 0.5}}}>
@@ -87,11 +86,15 @@ const MobileFooter = () => {
                     </AccordionDetails>
                 </Accordion>
 
-                <Accordion square={true} sx={{backgroundColor: "colors.footer"}}>
-                    <AccordionSummary sx={{backgroundColor: "colors.footer"}} expandIcon={<South
+                <Accordion
+                    elevation={0}
+                    square={true}
+                    sx={{backgroundColor: "background.paper"}}>
+                    <AccordionSummary sx={{backgroundColor: "background.paper"}} expandIcon={<South
                         sx={{
                             color: "icon.secondary",
                             fontSize: 24,
+                            padding: 0.4,
                             borderRadius: "100%",
                         }}
                     />}>
@@ -99,26 +102,21 @@ const MobileFooter = () => {
                             Main
                         </Typography>
                     </AccordionSummary>
-                    <AccordionDetails sx={{backgroundColor: "colors.footer"}}>
+                    <AccordionDetails sx={{backgroundColor: "background.paper"}}>
                         <Stack spacing={2}>
                             <Link to="#" style={{textDecoration: "none"}}>
                                 <Typography variant="body2" sx={{color: "white"}}>
-                                    About company
+                                    Home
                                 </Typography>
                             </Link>
                             <Link to="#" style={{textDecoration: "none"}}>
                                 <Typography variant="body2" sx={{color: "white"}}>
-                                    Our chemicals
+                                    Adoption
                                 </Typography>
                             </Link>
                             <Link to="#" style={{textDecoration: "none"}}>
                                 <Typography variant="body2" sx={{color: "white"}}>
-                                    Our equipment
-                                </Typography>
-                            </Link>
-                            <Link to="#" style={{textDecoration: "none"}}>
-                                <Typography variant="body2" sx={{color: "white"}}>
-                                    Work
+                                    Shelter Support
                                 </Typography>
                             </Link>
                             <Link to="#" style={{textDecoration: "none"}}>
@@ -129,77 +127,39 @@ const MobileFooter = () => {
                         </Stack>
                     </AccordionDetails>
                 </Accordion>
-                <Accordion square={true} sx={{backgroundColor: "colors.footer"}}>
-                    <AccordionSummary sx={{backgroundColor: "colors.footer"}} expandIcon={<South
-                        sx={{
-                            color: "icon.secondary",
-                            fontSize: 24,
-                            borderRadius: "100%",
-                        }}
-                    />}>
+                <Accordion
+                    elevation={0}
+                    square={true} sx={{backgroundColor: "background.paper"}}>
+                    <AccordionSummary
+                        sx={{backgroundColor: "background.paper"}}
+                        expandIcon={
+                            <South
+                                sx={{
+                                    color: "icon.secondary",
+                                    fontSize: 24,
+                                    padding: 0.4,
+                                    borderRadius: "100%",
+                                }}
+                            />}>
                         <Typography variant="body1" sx={{color: "white", fontWeight: 700}}>
-                            Cleaning
+                            Contacts
                         </Typography>
                     </AccordionSummary>
-                    <AccordionDetails sx={{backgroundColor: "colors.footer"}}>
-                        <Stack spacing={2}>
-
-                            <Link to="#" style={{textDecoration: "none"}}>
-                                <Typography variant="body2" sx={{color: "white"}}>
-                                    After pest control
-                                </Typography>
-                            </Link>
-                            <Link to="#" style={{textDecoration: "none"}}>
-                                <Typography variant="body2" sx={{color: "white"}}>
-                                    Post-construction
-                                </Typography>
-                            </Link>
-                            <Link to="#" style={{textDecoration: "none"}}>
-                                <Typography variant="body2" sx={{color: "white"}}>
-                                    After tenants
-                                </Typography>
-                            </Link>
-                            <Link to="#" style={{textDecoration: "none"}}>
-                                <Typography variant="body2" sx={{color: "white"}}>
-                                    Premises
-                                </Typography>
-                            </Link>
-                            <Link to="#" style={{textDecoration: "none"}}>
-                                <Typography variant="body2" sx={{color: "white"}}>
-                                    Dry cleaning of furniture
-                                </Typography>
-                            </Link>
-                        </Stack>
-                    </AccordionDetails>
-                </Accordion>
-                <Accordion square={true} sx={{backgroundColor: "colors.footer"}}>
-                    <AccordionSummary sx={{backgroundColor: "colors.footer"}} expandIcon={<South
-                        sx={{
-                            color: "icon.secondary",
-                            fontSize: 24,
-                            borderRadius: "100%",
-                        }}
-                    />}>
-                        <Typography variant="body1" sx={{color: "white", fontWeight: 700}}>
-                            Contact Info
-                        </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails sx={{backgroundColor: "colors.footer"}}>
+                    <AccordionDetails sx={{backgroundColor: "background.paper"}}>
                         <Stack spacing={2}>
                             <Box>
                                 <Stack direction="row" spacing={4} alignItems="center">
                                     <CallOutlined
                                         sx={{
-                                            color: "colors.accent",
+                                            color: "icon.secondary",
                                             fontSize: 24,
+                                            padding: 0.4,
                                             cursor: "pointer"
                                         }}
                                     />
-                                    <MUILink href="tel://+380334268644" style={{textDecoration: "none"}}>
-                                        <Typography
-                                            variant="body2"
-                                            sx={{color: "white", fontWeight: "bold", fontFamily: "Urbanist"}}>
-                                            +38 033-426 86 44
+                                    <MUILink href="tel://+46123456789" style={{textDecoration: "none"}}>
+                                        <Typography variant="body2" sx={{color: "white"}}>
+                                            +46 123 456 789
                                         </Typography>
                                     </MUILink>
                                 </Stack>
@@ -208,16 +168,17 @@ const MobileFooter = () => {
                                 <Stack direction="row" spacing={4} alignItems="center">
                                     <LocationOnOutlined
                                         sx={{
-                                            color: "colors.accent",
+                                            color: "icon.secondary",
                                             fontSize: 24,
+                                            padding: 0.4,
                                             cursor: "pointer"
                                         }}
                                     />
                                     <MUILink href="#" style={{textDecoration: "none"}}>
                                         <Typography
                                             variant="body2"
-                                            sx={{color: "white", fontWeight: "bold", fontFamily: "Urbanist"}}>
-                                            Kyiv,Vidradnyi avenue 55
+                                            sx={{color: "white"}}>
+                                            Sheilas Gata 58, Uppsala, Sweden
                                         </Typography>
                                     </MUILink>
                                 </Stack>
@@ -226,16 +187,17 @@ const MobileFooter = () => {
                                 <Stack direction="row" spacing={4} alignItems="center">
                                     <MailOutline
                                         sx={{
-                                            color: "colors.accent",
+                                            color: "icon.secondary",
                                             fontSize: 24,
+                                            padding: 0.4,
                                             cursor: "pointer"
                                         }}
                                     />
-                                    <MUILink href="mailto://info@unonacleaning.com" style={{textDecoration: "none"}}>
+                                    <MUILink href="mailto://info@pfshelter.org" underline="none">
                                         <Typography
                                             variant="body2"
-                                            sx={{color: "white", fontWeight: "bold", fontFamily: "Urbanist"}}>
-                                            info@unonacleaning.com
+                                            sx={{color: "white"}}>
+                                            info@pfshelter.org
                                         </Typography>
                                     </MUILink>
                                 </Stack>
@@ -243,36 +205,46 @@ const MobileFooter = () => {
 
                             <Box>
                                 <Stack direction="row" spacing={4} alignItems="center">
-                                    <ScheduleOutlined
-                                        sx={{
-                                            color: "colors.accent",
-                                            fontSize: 24,
-                                            cursor: "pointer"
-                                        }}
-                                    />
                                     <MUILink href="#" style={{textDecoration: "none"}}>
-                                        <Typography
-                                            variant="body2"
-                                            sx={{color: "white", fontWeight: "bold", fontFamily: "Urbanist"}}>
-                                            Mon-Fri: 09:.00 am - 05:00 pm
-                                        </Typography>
+                                        <Instagram
+                                            sx={{
+                                                color: "icon.secondary",
+                                                fontSize: 24,
+                                                padding: 0.4,
+                                                cursor: "pointer"
+                                            }}
+                                        />
                                     </MUILink>
-                                </Stack>
-                            </Box>
-                            <Box>
-                                <Stack direction="row" spacing={4} alignItems="center">
-                                    <ScheduleOutlined
-                                        sx={{
-                                            color: "colors.accent",
-                                            fontSize: 24,
-                                            cursor: "pointer"
-                                        }}
-                                    />
-                                    <Typography
-                                        variant="body2"
-                                        sx={{color: "white", fontWeight: "bold", fontFamily: "Urbanist"}}>
-                                        Saturday, Sunday: closed
-                                    </Typography>
+                                    <MUILink href="#" style={{textDecoration: "none"}}>
+                                        <Facebook
+                                            sx={{
+                                                color: "icon.secondary",
+                                                fontSize: 24,
+                                                padding: 0.4,
+                                                cursor: "pointer"
+                                            }}
+                                        />
+                                    </MUILink>
+                                    <MUILink href="#" style={{textDecoration: "none"}}>
+                                        <YouTube
+                                            sx={{
+                                                color: "icon.secondary",
+                                                fontSize: 24,
+                                                padding: 0.4,
+                                                cursor: "pointer"
+                                            }}
+                                        />
+                                    </MUILink>
+                                    <MUILink href="#" style={{textDecoration: "none"}}>
+                                        <Twitter
+                                            sx={{
+                                                color: "icon.secondary",
+                                                fontSize: 24,
+                                                padding: 0.4,
+                                                cursor: "pointer"
+                                            }}
+                                        />
+                                    </MUILink>
                                 </Stack>
                             </Box>
                         </Stack>

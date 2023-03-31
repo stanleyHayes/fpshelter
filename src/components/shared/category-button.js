@@ -1,11 +1,10 @@
 import {Card, Typography} from "@mui/material";
-import {Link} from "react-router-dom";
+
 
 const CategoryButton = ({category, selected, handleCategorySelect}) => {
-    return
-    (
+    return (
         <Card
-            onClick={() => handleCategorySelect(category.name)}
+            onClick={() => handleCategorySelect(category.category)}
             elevation={1}
             sx={{
                 backgroundImage: `url(${category.image})`,
@@ -15,7 +14,8 @@ const CategoryButton = ({category, selected, handleCategorySelect}) => {
                 height: 200,
                 display: "flex",
                 alignItems: "flex-end",
-                backgroundColor: selected ? "secondary.main" : "background.paper"
+                backgroundColor: selected ? "light.secondary" : "background.paper",
+                cursor: "pointer"
             }}>
             <Card
                 sx={{
@@ -24,7 +24,10 @@ const CategoryButton = ({category, selected, handleCategorySelect}) => {
                     width: "100%",
                     py: 0.5
                 }}>
-                <Typography align="center" variant="h6" sx={{color: "text.glass"}}>{category.name}</Typography>
+                <Typography
+                    align="center"
+                    variant="body1"
+                    sx={{color: selected ? "secondary.main" : "text.glass"}}>{category.name}</Typography>
             </Card>
         </Card>
 

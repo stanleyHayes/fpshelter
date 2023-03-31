@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const Category = ({category}) => {
     return (
-        <Link to={`adoptions/${category.category.toLowerCase()}`} style={{textDecoration: "none"}}>
+        <Link to={`adoptions/?category=${category.category.toLowerCase()}`} style={{textDecoration: "none"}}>
             <Card
                 elevation={1}
                 sx={{

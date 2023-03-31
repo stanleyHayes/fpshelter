@@ -44,7 +44,7 @@ const lightTheme = createTheme({
             accentBackground: "rgba(11,29,60,0.15)",
             secondaryBackground: "rgba(17,35,81,0.15)"
         },
-        divider: "#112351",
+        divider: "rgba(17,35,81,0.3)",
         mode: "light",
     },
     shape: {
@@ -96,7 +96,7 @@ const darkTheme = createTheme({
             secondaryBackground: "rgba(229,73,68,0.15)"
         },
         mode: "dark",
-        divider: "#e54944"
+        divider: "rgba(229,73,68,0.3)"
     },
     shape: {
         borderRadius: 32
