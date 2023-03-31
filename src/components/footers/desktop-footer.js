@@ -72,7 +72,7 @@ const DesktopFooter = () => {
                 </Grid>
                 <Grid item={true} lg={4}>
                     <Stack spacing={2}>
-                        <Typography variant="body1" sx={{color: "white", fontWeight: 700}}>
+                        <Typography variant="body1" sx={{color: "white"}}>
                             Main
                         </Typography>
                         <Link to="#" style={{textDecoration: "none"}}>
@@ -100,7 +100,7 @@ const DesktopFooter = () => {
                 </Grid>
                 <Grid item={true} lg={4}>
                     <Stack spacing={2}>
-                        <Typography variant="body1" sx={{color: "white", fontWeight: 700}}>
+                        <Typography variant="body1" sx={{color: "white"}}>
                             Contact
                         </Typography>
                         <Box>

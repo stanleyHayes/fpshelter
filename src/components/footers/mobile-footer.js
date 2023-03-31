@@ -98,7 +98,7 @@ const MobileFooter = () => {
                             borderRadius: "100%",
                         }}
                     />}>
-                        <Typography variant="body1" sx={{color: "text.primary", fontWeight: 700}}>
+                        <Typography variant="body1" sx={{color: "text.primary"}}>
                             Main
                         </Typography>
                     </AccordionSummary>
@@ -141,7 +141,7 @@ const MobileFooter = () => {
                                     borderRadius: "100%",
                                 }}
                             />}>
-                        <Typography variant="body1" sx={{color: "text.primary", fontWeight: 700}}>
+                        <Typography variant="body1" sx={{color: "text.primary"}}>
                             Contacts
                         </Typography>
                     </AccordionSummary>
