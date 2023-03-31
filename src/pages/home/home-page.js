@@ -28,7 +28,7 @@ const HomePage = () => {
             </Element>
 
             <Element name="contact">
-                <AnimatedSection backgroundColor="background.paper">
+                <AnimatedSection>
                     <SupportSection/>
                 </AnimatedSection>
             </Element>
