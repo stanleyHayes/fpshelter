@@ -72,26 +72,26 @@ const DesktopFooter = () => {
                 </Grid>
                 <Grid item={true} lg={4}>
                     <Stack spacing={2}>
-                        <Typography variant="body1" sx={{color: "white"}}>
+                        <Typography variant="body1" sx={{color: "text.primary"}}>
                             Main
                         </Typography>
                         <Link to="#" style={{textDecoration: "none"}}>
-                            <Typography variant="body2" sx={{color: "white"}}>
+                            <Typography variant="body2" sx={{color: "text.secondary"}}>
                                 Home
                             </Typography>
                         </Link>
                         <Link to="#" style={{textDecoration: "none"}}>
-                            <Typography variant="body2" sx={{color: "white"}}>
+                            <Typography variant="body2" sx={{color: "text.secondary"}}>
                                 About Us
                             </Typography>
                         </Link>
                         <Link to="#" style={{textDecoration: "none"}}>
-                            <Typography variant="body2" sx={{color: "white"}}>
+                            <Typography variant="body2" sx={{color: "text.secondary"}}>
                                 Adoption
                             </Typography>
                         </Link>
                         <Link to="#" style={{textDecoration: "none"}}>
-                            <Typography variant="body2" sx={{color: "white"}}>
+                            <Typography variant="body2" sx={{color: "text.secondary"}}>
                                 Shelter Support
                             </Typography>
                         </Link>
@@ -100,7 +100,7 @@ const DesktopFooter = () => {
                 </Grid>
                 <Grid item={true} lg={4}>
                     <Stack spacing={2}>
-                        <Typography variant="body1" sx={{color: "white"}}>
+                        <Typography variant="body1" sx={{color: "text.primary"}}>
                             Contact
                         </Typography>
                         <Box>
@@ -114,7 +114,7 @@ const DesktopFooter = () => {
                                     }}
                                 />
                                 <MUILink href="tel://+46123456789" style={{textDecoration: "none"}}>
-                                    <Typography variant="body2" sx={{color: "white"}}>
+                                    <Typography variant="body2" sx={{color: "text.secondary"}}>
                                         +46 123 456 789
                                     </Typography>
                                 </MUILink>
@@ -133,7 +133,7 @@ const DesktopFooter = () => {
                                 <MUILink href="#" style={{textDecoration: "none"}}>
                                     <Typography
                                         variant="body2"
-                                        sx={{color: "white"}}>
+                                        sx={{color: "text.secondary"}}>
                                         Sheilas Gata 58, Uppsala, Sweden
                                     </Typography>
                                 </MUILink>
@@ -152,7 +152,7 @@ const DesktopFooter = () => {
                                 <MUILink href="mailto://info@pfshelter.org" style={{textDecoration: "none"}}>
                                     <Typography
                                         variant="body2"
-                                        sx={{color: "white"}}>
+                                        sx={{color: "text.secondary"}}>
                                         info@pfshelter.org
                                     </Typography>
                                 </MUILink>
