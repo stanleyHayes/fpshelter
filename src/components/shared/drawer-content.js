@@ -7,6 +7,7 @@ import {selectUI, UI_ACTION_CREATORS} from "../../redux/features/ui/ui-slice";
 import {useDispatch, useSelector} from "react-redux";
 import redLogo from "../../assets/images/logo/redLogo.png";
 import blueLogo from "../../assets/images/logo/blueLogo.png";
+import NavLink from "./nav-link";
 
 const DrawerContent = () => {
 
@@ -115,7 +116,7 @@ const DrawerContent = () => {
 
                 <Box sx={{px: 4}}>
                     <Stack direction="column" spacing={3}>
-                        <NavigationLink path="home" label="Home"/>
+                        <NavLink path="home" label="Home"/>
                         <NavigationLink path="about" label="About Us"/>
                         <NavigationLink path="adoption" label="Adoption"/>
                         <NavigationLink path="support" label="Shelter Support"/>

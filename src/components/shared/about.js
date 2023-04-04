@@ -11,7 +11,10 @@ const About = ({image, name, description, reversed = false}) => {
                         width: "100%",
                         height: 300,
                         objectFit: "cover",
-                        borderRadius: 1
+                        borderTopLeftRadius: 0,
+                        borderTopRightRadius: 32,
+                        borderBottomRightRadius: 0,
+                        borderBottomLeftRadius: 32
                     }}
                 />
             </Grid>

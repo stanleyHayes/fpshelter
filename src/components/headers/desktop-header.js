@@ -7,6 +7,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
 import redLogo from "./../../assets/images/logo/redLogo.png";
 import blueLogo from "./../../assets/images/logo/blueLogo.png";
+import NavLink from "../shared/nav-link";
 
 const DesktopHeader = () => {
 
@@ -67,7 +68,7 @@ const DesktopHeader = () => {
                 </Grid>
                 <Grid item={true}>
                     <Stack direction="row" spacing={3} alignItems="center">
-                        <NavigationLink path="home" label="Home"/>
+                        <NavLink path="home" label="Home"/>
                         <NavigationLink path="us" label="About Us"/>
                         <NavigationLink path="adoption" label="Adoption"/>
                         <NavigationLink path="support" label="Shelter Support"/>
