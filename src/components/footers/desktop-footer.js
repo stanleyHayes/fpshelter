@@ -30,7 +30,6 @@ const DesktopFooter = () => {
                                     <Typography
                                         variant="h4"
                                         sx={{
-                                            textTransform: "uppercase",
                                             color: "secondary.main",
                                             fontWeight: 700,
                                             fontFamily: "SatrevaNova",

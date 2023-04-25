@@ -41,7 +41,6 @@ const Splash = () => {
                             <Typography
                                 variant="h6"
                                 sx={{
-                                    textTransform: "uppercase",
                                     color: "secondary.main",
                                     fontWeight: 700,
                                     fontFamily: "SatrevaNova",

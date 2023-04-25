@@ -45,7 +45,6 @@ const MobileFooter = () => {
                         <Typography
                             variant="h4"
                             sx={{
-                                textTransform: "uppercase",
                                 color: "text.primary",
                                 fontWeight: 700,
                                 fontFamily: "SatrevaNova",

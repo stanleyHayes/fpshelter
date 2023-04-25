@@ -37,7 +37,6 @@ const MobileHeader = () => {
                                 <Typography
                                     variant="h6"
                                     sx={{
-                                        textTransform: "uppercase",
                                         color: "icon.secondary",
                                         fontWeight: 700,
                                         fontFamily: "SatrevaNova",
